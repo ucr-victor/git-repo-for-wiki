@@ -1,5 +1,6 @@
 package com.springboot.wiki.config;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +14,8 @@ import java.lang.invoke.MethodHandles;
 //@ComponentScan({"com.springboot.wiki", "com.test"})
 @SpringBootApplication
 // Connect 持久层
+@MapperScan("com.springboot.wiki.mapper")
+
 
 public class WikiApplication {
 
