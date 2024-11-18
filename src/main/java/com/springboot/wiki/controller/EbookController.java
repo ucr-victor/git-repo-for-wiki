@@ -1,7 +1,9 @@
 package com.springboot.wiki.controller;
 
 import com.springboot.wiki.domain.Demo;
+import com.springboot.wiki.domain.Ebook;
 import com.springboot.wiki.mapper.DemoMapper;
+import com.springboot.wiki.mapper.EbookMapper;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,16 +13,16 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/demo")
+@RequestMapping("/ebook")
 
-public class DemoController {
+public class EbookController {
 
     @Resource
-    private DemoMapper demoMapper;
+    private EbookMapper ebookMapper;
 
     @GetMapping("/list")
-    public List<Demo> list(){
-        return demoMapper.selectByExample(null);
+    public List<Ebook> list(){
+        return ebookMapper.selectByExample(null);
     }
 
 }
